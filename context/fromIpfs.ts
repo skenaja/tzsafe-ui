@@ -48,17 +48,17 @@ export default async function fromIpfs(meta: any): Promise<{
     formData.append("file", blob, "tzsafe-metadata.json");
   }
 
-  const response = await fetch(`${IPFS}/add`, {
+  const response = await fetch(`${IPFS}/api/v0/add`, {
     method: "POST",
     body: formData,
     headers: headers,
   });
 
-  const data = (await response.json()) as { cid: string };
+  const data = (await response.json()) as { Hash: string };
 
   return {
     metadata: MichelsonMap.fromLiteral({
-      "": buf2hex(Buffer.from(`ipfs://${data.cid}`)),
+      "": buf2hex(Buffer.from(`ipfs://${data.Hash}`)),
     }),
   };
 }

@@ -1,3 +1,4 @@
+import { PreapplyParams } from "@taquito/rpc";
 import {
   BeaconErrorType,
   BeaconMessageType,
@@ -10,8 +11,7 @@ import {
   SigningType,
   BeaconResponseInputMessage,
   encodePoeChallengePayload,
-} from "@airgap/beacon-sdk";
-import { PreapplyParams } from "@taquito/rpc";
+} from "@tezos-x/octez.connect-sdk";
 import { TinyEmitter } from "tiny-emitter";
 
 export enum Event {

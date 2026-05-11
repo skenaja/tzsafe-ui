@@ -1,6 +1,6 @@
-import { NetworkType } from "@airgap/beacon-sdk";
 import { Parser } from "@taquito/michel-codec";
 import { validateAddress, ValidationResult, char2Bytes } from "@taquito/utils";
+import { NetworkType } from "@tezos-x/octez.connect-sdk";
 import {
   ErrorMessage,
   Field,

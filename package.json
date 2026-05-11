@@ -20,8 +20,13 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown pages/ components/ context/ types/ versioned/ utils/"
   },
+  "overrides": {
+    "@taquito/beacon-wallet": {
+      "@airgap/beacon-dapp": "npm:@tezos-x/octez.connect-dapp@4.8.4"
+    }
+  },
   "dependencies": {
-    "@airgap/beacon-sdk": "^4.1.3-beta.1",
+    "@tezos-x/octez.connect-sdk": "4.8.4",
     "@ariakit/react": "^0.1.8",
     "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-select": "^1.2.0",
